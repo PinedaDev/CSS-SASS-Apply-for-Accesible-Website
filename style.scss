@@ -1,3 +1,228 @@
-h1 {
-   color: goldenrod;
+// // I mostly used nesting and variable, I didn't use external file that I can import it to here.
+// you mentioned that we have to apply "KISS"
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
+
+// colors 
+$primaryP:#ffff;
+$primaryHeader:#000000;
+$primaryText:#ffb600;
+$primaryGray:#484747;
+
+// flex items in header
+@mixin flex {
+
+   display: flex;
+  
+   justify-content: space-between;
+   color: $primaryHeader;
+   height: 100vh;
+   background-color: #050000;
+   align-items: center;
+   padding: 30px 10%;
+
+   
+} 
+
+// I used these for tags in the cards
+@mixin fomatText {
+   text-align: center;
+   color:$primaryP;
+  margin: auto;
+  margin-bottom: 25px;
+
+   
+}
+//buttons
+@mixin primaryBtn{
+   text-transform: uppercase;
+   display: block;
+   width:300px;
+   border: #ffb600 1px solid;
+   padding: 10px;
+   margin: auto;
+   font-size: 13px;
+   text-align: center;
+   text-decoration: none;
+   color: $primaryP;
+   letter-spacing: 1.5px;
+   font-weight: 700;
+   border-radius: 2px;
+   cursor: pointer;
+   &:hover{
+      background-color: $primaryGray;
+   }
+   
+ }
+//  All header elements are nested here
+header{
+   @include flex();
+   height: 100px;
+.logo{
+   width:140px ;
+  
+}
+li ,a {
+   font-size: 16px;
+   font-weight: 500;
+   color:$primaryText;
+   text-decoration: none; 
+   display: inline;
+   text-transform: uppercase;
+}   
+}
+.nav__links{
+   list-style: none;
+   li{
+      // display: inline-block;
+      padding: 0 20px;
+   }
+   li,a:hover{     
+      color:$primaryP;
+   
+      
+}
+ 
+}
+.row{
+   @include flex();
+   
+ height: fit-content;
+ .card{
+   text-align: center
+ }
+   .card-title {
+      @include fomatText();
+      height: auto;
+   }
+   .card-text{
+      @include fomatText();
+      
+
+   }
+   // card button
+   .btn{
+      @include primaryBtn();
+   }
+}
+.footer{
+   h2{
+      color: $primaryText;
+      margin-bottom: 10px;
+      text-align: center;
+   }
+   p{
+      width: 380px;
+      color: $primaryP;
+      text-align: center;
+   }
+   ul{
+      list-style: none;
+      li,a{
+         text-decoration: none;
+         color:$primaryP;
+         text-align: center;
+         margin-bottom: 5px;
+         &:hover{
+            color: $primaryGray;
+         }
+        
+      } 
+   }
+  
+   @include flex();
+   background-image:url("assets/images/footer-background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: fit-content;
+  
+
+   }
+
+// responsive design
+// for header elements
+@media screen and(max-width:1360px){
+   header{
+      @include flex();
+   height: 100px;
+   img{
+      width:140px ;
+   }
+   li ,a {
+      font-size: 16px;
+      font-weight: 500;
+      color:$primaryText;
+      text-decoration: none; 
+      display: none;
+      text-transform: uppercase;
+   }   
+   }
+   .nav__links{
+      list-style: none;
+      li{
+      
+         padding: 0 20px;
+      }
+      li,a:hover{     
+         color:$primaryP;     
+   }
+   }
+   
+// responsive for cards
+   .row{
+     
+      flex-direction: column;
+      
+   
+      .card-image{
+        
+         margin-left: auto;
+         margin-right: auto;
+         
+         width: 50%;
+      }
+      .card-title {
+         @include fomatText();
+          
+      }
+      .card-text{
+         @include fomatText()
+      }
+      .btn{
+         @include primaryBtn();
+      }
+   }
+   .footer{
+      flex-direction: column;
+      text-align: center;
+      h2{
+         color: $primaryText;
+         margin-bottom: 15px;
+      }
+      p{
+         color: $primaryP;
+         margin-bottom: 15px;
+
+      }
+      ul {
+         list-style: none;
+      }
+      li,a {
+         color: $primaryP;
+         margin-bottom: 5px;
+         text-decoration: none;
+
+         &:hover{
+            color: $primaryGray;
+         }
+      }
+     
+     
+   }
+  
+}
+
+

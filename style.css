@@ -1,5 +1,218 @@
-h1 {
-  color: goldenrod;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  height: 100vh;
+  background-color: #050000;
+  align-items: center;
+  padding: 30px 10%;
+  height: 100px;
+}
+header .logo {
+  width: 140px;
+}
+header li, header a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffb600;
+  text-decoration: none;
+  display: inline;
+  text-transform: uppercase;
+}
+
+.nav__links {
+  list-style: none;
+}
+.nav__links li {
+  padding: 0 20px;
+}
+.nav__links li, .nav__links a:hover {
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  height: 100vh;
+  background-color: #050000;
+  align-items: center;
+  padding: 30px 10%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.row .card {
+  text-align: center;
+}
+.row .card-title {
+  text-align: center;
+  color: white;
+  margin: auto;
+  margin-bottom: 25px;
+  height: auto;
+}
+.row .card-text {
+  text-align: center;
+  color: white;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.row .btn {
+  text-transform: uppercase;
+  display: block;
+  width: 300px;
+  border: #ffb600 1px solid;
+  padding: 10px;
+  margin: auto;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.row .btn:hover {
+  background-color: #484747;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  height: 100vh;
+  background-color: #050000;
+  align-items: center;
+  padding: 30px 10%;
+  background-image: url("assets/images/footer-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer h2 {
+  color: #ffb600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.footer p {
+  width: 380px;
+  color: white;
+  text-align: center;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li, .footer ul a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.footer ul li:hover, .footer ul a:hover {
+  color: #484747;
+}
+
+@media screen and (max-width: 1360px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    height: 100vh;
+    background-color: #050000;
+    align-items: center;
+    padding: 30px 10%;
+    height: 100px;
+  }
+  header img {
+    width: 140px;
+  }
+  header li, header a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffb600;
+    text-decoration: none;
+    display: none;
+    text-transform: uppercase;
+  }
+  .nav__links {
+    list-style: none;
+  }
+  .nav__links li {
+    padding: 0 20px;
+  }
+  .nav__links li, .nav__links a:hover {
+    color: white;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .card-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .row .card-title {
+    text-align: center;
+    color: white;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .row .card-text {
+    text-align: center;
+    color: white;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .row .btn {
+    text-transform: uppercase;
+    display: block;
+    width: 300px;
+    border: #ffb600 1px solid;
+    padding: 10px;
+    margin: auto;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .row .btn:hover {
+    background-color: #484747;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer h2 {
+    color: #ffb600;
+    margin-bottom: 15px;
+  }
+  .footer p {
+    color: white;
+    margin-bottom: 15px;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer li, .footer a {
+    color: white;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+  .footer li:hover, .footer a:hover {
+    color: #484747;
+  }
+}/*# sourceMappingURL=style.css.map */
