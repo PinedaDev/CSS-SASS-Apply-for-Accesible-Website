@@ -4,6 +4,7 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   background: $primaryHeader;;
 }
 
 // colors 
@@ -18,14 +19,15 @@ $primaryGray:#484747;
    display: flex;
   
    justify-content: space-between;
-   color: $primaryHeader;
+   
    height: 100vh;
-   background-color: #050000;
+   background-color:$primaryHeader;;
    align-items: center;
    padding: 30px 10%;
 
    
 } 
+
 
 // I used these for tags in the cards
 @mixin fomatText {
@@ -36,6 +38,7 @@ $primaryGray:#484747;
 
    
 }
+
 //buttons
 @mixin primaryBtn{
    text-transform: uppercase;
@@ -91,9 +94,10 @@ li ,a {
    @include flex();
    
  height: fit-content;
- .card{
-   text-align: center
- }
+.card-img{
+   width: 80%;
+   margin-left: 45px
+}
    .card-title {
       @include fomatText();
       height: auto;
@@ -107,6 +111,7 @@ li ,a {
    .btn{
       @include primaryBtn();
    }
+  
 }
 .footer{
    h2{
@@ -175,8 +180,11 @@ li ,a {
    .row{
      
       flex-direction: column;
-      
-   
+      .card-img{
+         width: 50%;
+         margin-left: 25%;
+      }
+    
       .card-image{
         
          margin-left: auto;

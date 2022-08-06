@@ -4,6 +4,108 @@
   padding: 0;
 }
 
+/* css animation */
+#head {
+  animation: head 2s infinite;
+  transition-duration: 15s;
+  transition-delay: 50s;
+
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes head {
+  from {
+    transform: rotatez(5deg);
+  }
+  to {
+    transform: rotatez(-1deg);
+  }
+}
+
+#right-hand,
+#left-hand {
+  animation: hand 0.2s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes hand {
+  from {
+
+    transform: rotatez(10deg);
+  }
+  to {
+    transform: rotatez(-0deg);
+  }
+}
+/* /////////////////////////css animation/////////////////////////////////////// */
+
+#right-foot {
+  animation: feet 2s ease-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes feet {
+  from {
+    transform: rotateZ(5deg);
+  }
+  to {
+    transform: rotateZ(40deg);
+  }
+  to {
+    transform: rotateX(30deg);
+  }
+}
+#left-foot {
+  animation: feet 0.5s ease-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes feet {
+  from {
+    transform: rotateZ(5deg);
+  }
+  to {
+    transform: rotateZ(40deg);
+  }
+  to {
+    transform: rotateX(30deg);
+  }
+}
+.container {
+  display:flex;
+  justify-content: space-between;
+  background-color: #222020;
+}
+.container .wanagh {
+margin: auto;
+}
+
+.container .wanagh h1 {
+  margin-bottom: 5px;
+  color: #ffb600;
+  padding: 30px;
+  text-align: center;
+}
+.container .wanagh p {
+  
+  
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+.container .anime-svg {
+ margin: auto;
+}
+.logo{
+  display: flex;
+  background-color:#050000;
+  justify-content: space-around;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +119,8 @@ header {
 header .logo {
   width: 140px;
 }
-header li, header a {
+header li,
+header a {
   font-size: 16px;
   font-weight: 500;
   color: #ffb600;
@@ -32,7 +135,8 @@ header li, header a {
 .nav__links li {
   padding: 0 20px;
 }
-.nav__links li, .nav__links a:hover {
+.nav__links li,
+.nav__links a:hover {
   color: white;
 }
 
@@ -48,8 +152,9 @@ header li, header a {
   height: -moz-fit-content;
   height: fit-content;
 }
-.row .card {
-  text-align: center;
+.row .card-img {
+  width: 80%;
+  margin-left: 45px;
 }
 .row .card-title {
   text-align: center;
@@ -112,13 +217,15 @@ header li, header a {
 .footer ul {
   list-style: none;
 }
-.footer ul li, .footer ul a {
+.footer ul li,
+.footer ul a {
   text-decoration: none;
   color: white;
   text-align: center;
   margin-bottom: 5px;
 }
-.footer ul li:hover, .footer ul a:hover {
+.footer ul li:hover,
+.footer ul a:hover {
   color: #484747;
 }
 
@@ -136,7 +243,8 @@ header li, header a {
   header img {
     width: 140px;
   }
-  header li, header a {
+  header li,
+  header a {
     font-size: 16px;
     font-weight: 500;
     color: #ffb600;
@@ -150,11 +258,21 @@ header li, header a {
   .nav__links li {
     padding: 0 20px;
   }
-  .nav__links li, .nav__links a:hover {
+  .nav__links li,
+  .nav__links a:hover {
     color: white;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #222020;
   }
   .row {
     flex-direction: column;
+  }
+  .row .card-img {
+    width: 50%;
+    margin-left: 25%;
   }
   .row .card-image {
     margin-left: auto;
@@ -207,12 +325,14 @@ header li, header a {
   .footer ul {
     list-style: none;
   }
-  .footer li, .footer a {
+  .footer li,
+  .footer a {
     color: white;
     margin-bottom: 5px;
     text-decoration: none;
   }
-  .footer li:hover, .footer a:hover {
+  .footer li:hover,
+  .footer a:hover {
     color: #484747;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
