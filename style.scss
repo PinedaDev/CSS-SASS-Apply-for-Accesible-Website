@@ -7,18 +7,22 @@ font-family: 'Tilt Prism',
 cursive; 
 */
 
-:root {
-    --main-color: #2B3467;
-    --secondary-color: #BAD7E9;
-    --accents-color: #EB455F;
-
-    --light-text: 300;
-    --regular-text: 400;
-    --bold-text: 700;
-}
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+$main-color: #2B3467;
+$secondary-color: #BAD7E9;
+$accents-color: #EB455F;
+
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+
+@mixin montserrat-base {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: $font-regular;
 }
