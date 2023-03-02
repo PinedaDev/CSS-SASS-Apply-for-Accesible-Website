@@ -53,7 +53,7 @@ hr {
   font-size: 1.2rem;
   margin: 2rem;
   border-bottom: 5px solid #EB455F;
-  border-radius: 10%;
+  border-radius: 5px;
   border-color: transparent;
 }
 .navigation__link:hover {
@@ -89,7 +89,7 @@ hr {
   text-align: center;
   margin: 2rem;
   border-bottom: 5px solid #EB455F;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 .services_section__wrapper {
   width: 100%;
@@ -106,7 +106,7 @@ hr {
   transition: 0.3s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   border: 3px solid #BAD7E9;
-  border-radius: 2%;
+  border-radius: 10px;
 }
 .services_section__card:hover {
   transform: translateY(-5%);
@@ -124,7 +124,7 @@ hr {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   border: 3px solid #BAD7E9;
-  border-radius: 2%;
+  border-radius: 10px;
 }
 .services_section__btn:hover {
   color: #EB455F;
@@ -142,7 +142,7 @@ hr {
   text-align: center;
   margin: 2rem;
   border-bottom: 5px solid #EB455F;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 .tech_stack_section__icons {
   width: 100%;
@@ -151,6 +151,68 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.blogs_section {
+  color: #BAD7E9;
+  padding: 2rem;
+  display: grid;
+  grid-gap: 4rem;
+  place-items: center;
+}
+.blogs_section__header {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+  border-bottom: 5px solid #EB455F;
+  border-radius: 5px;
+}
+.blogs_section__card {
+  border: 3px solid #BAD7E9;
+  border-radius: 10px;
+  width: 70%;
+  padding: 1rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 3fr;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.blogs_section__card_header {
+  font-size: 2.25rem;
+}
+.blogs_section__image {
+  float: left;
+  height: fit-content;
+  margin-right: 1rem;
+  left: 50%;
+}
+.blogs_section__card_text {
+  font-size: 1.5rem;
+}
+.blogs_section__content {
+  display: grid;
+  grid-gap: 1rem;
+}
+.blogs_section__link {
+  color: #BAD7E9;
+  background-color: #2B3467;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: 3px solid #BAD7E9;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+}
+.blogs_section__link:hover {
+  color: #EB455F;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
