@@ -20,24 +20,24 @@
 </head>
 
 <body>
-  <span aria-label="logo">KEYS</span>
-  <nav aria-label="navigation menu">
-    <ul id="menubar" role="menubar" aria-label="navigation menu">
+  <span class="logo" aria-label="logo">KEYS</span>
+  <nav class="navigation" aria-label="navigation menu">
+    <ul class="navigation__links" id="menubar" role="menubar" aria-label="navigation menu">
       <li role="none">
-        <a href="#" role="menuitem" tabindex="0">Home</a>
+        <a href="#" role="menuitem" tabindex="0" class="navigation__link">Home</a>
       </li>
       <li role="none">
-        <a href="#about" role="menuitem" tabindex="0">About</a>
+        <a href="#about" role="menuitem" tabindex="0" class="navigation__link">About</a>
       </li>
       <li role="none">
-        <a href="#contact" role="menuitem" tabindex="0">Contact</a>
+        <a href="#contact" role="menuitem" tabindex="0" class="navigation__link">Contact</a>
       </li>
     </ul>
   </nav>
   <hr>
   <main>
     <div class="hero">
-      <p style="display: inline-block;">
+      <p class="hero__text" style="display: inline-block;">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
         Veritatis quibusdam ipsa in repellat magni quo vitae <br>
         repellendus iure corrupti saepe nobis maxime, doloribus cumque <br>
@@ -45,13 +45,13 @@
         adipisci. Velit voluptatibus dolore illum molestiae. Voluptate, fuga!
       </p>
 
-      <img src="./assets/images/header.svg" width="900px" alt="ilustration of person with laptop">
+      <img class="hero__image" src="./assets/images/header.svg" width="900px" alt="ilustration of person with laptop">
     </div>
 
-    <section id="services">
-      <h1> Services </h1>
-      <div class="service-card" style="display: inline-block;">
-        <h2 id="service1">
+    <section class="services_section" id="services">
+      <h1 class="services_section__header"> Services </h1>
+      <div class="services_section__card" style="display: inline-block;">
+        <h2 class="services_section__card_header" id="service1">
           Service 1
         </h2>
 
@@ -60,13 +60,13 @@
           Nam architecto tenetur ut hic ad? Numquam harum<br>
           laborum maiores obcaecati assumenda!
         </p>
-        <button id="srv1-btn" aria-labelledby="service1 srv1-btn">
+        <button class="services_section__btn" id="srv1-btn" aria-labelledby="service1 srv1-btn">
           More
         </button>
       </div>
 
-      <div class="service-card" style="display: inline-block;">
-        <h2 id="service2">
+      <div class="services_section__card" style="display: inline-block;">
+        <h2 class="services_section__card_header" id="service2">
           Service 2
         </h2>
 
@@ -75,13 +75,13 @@
           Nam architecto tenetur ut hic ad? Numquam harum<br>
           laborum maiores obcaecati assumenda!
         </p>
-        <button id="srv2-btn" aria-labelledby="service2 srv2-btn">
+        <button class="services_section__btn" id="srv2-btn" aria-labelledby="service2 srv2-btn">
           More
         </button>
       </div>
 
-      <div class="service-card" style="display: inline-block;">
-        <h2 id="service3">
+      <div class="services_section__card" style="display: inline-block;">
+        <h2 class="services_section__card_header" id="service3">
           Service 3
         </h2>
 
@@ -90,92 +90,95 @@
           Nam architecto tenetur ut hic ad? Numquam harum<br>
           laborum maiores obcaecati assumenda!
         </p>
-        <button id="srv3-btn" aria-labelledby="service3 srv3-btn">
+        <button class="services_section__btn" id="srv3-btn" aria-labelledby="service3 srv3-btn">
           More
         </button>
       </div>
     </section>
 
-    <section id="tech-stack">
-      <h2>
+    <section class="tech_stack_section" id="tech-stack">
+      <h2 class="tech_stack_section__header">
         Tech-Stack
       </h2>
-      <ul aria-label="tech-stack" style="display: inline-block;">
-        <li role="none"><i class="fab fa-js"></i></li>
-        <li role="none"><i class="fab fa-html5"></i></li>
-        <li role="none"><i class="fab fa-react"></i></li>
-        <li role="none"><i class="fab fa-sass"></i></li>
-        <li role="none"><i class="fab fa-css3"></i></li>
+      <ul class="tech_stack_section__icons" aria-label="tech-stack" style="display: inline-block;">
+        <li class="tech_stack_section__icon" role="none"><i class="fab fa-js"></i></li>
+        <li class="tech_stack_section__icon" role="none"><i class="fab fa-html5"></i></li>
+        <li class="tech_stack_section__icon" role="none"><i class="fab fa-react"></i></li>
+        <li class="tech_stack_section__icon" role="none"><i class="fab fa-sass"></i></li>
+        <li class="tech_stack_section__icon" role="none"><i class="fab fa-css3"></i></li>
       </ul>
     </section>
 
-    <section id="blogs">
-      <h2>
+    <section class="blogs_section" id="blogs">
+      <h2 class="blogs_section__header">
         Blogs
       </h2>
 
-      <div>
-        <section>
-          <img src="./assets/images/img-1.jpg" width="300px" alt="laptop keyboard image" style="display: inline;">
-          <h3 style="display: inline;" id="blog1-header">Blog 1</h3>
-          <p>
+      <div class="blogs_section__container">
+        <section class="blogs_section__card">
+          <img class="blogs_section__image" src="./assets/images/img-1.jpg" width="300px" alt="laptop keyboard image"
+            style="display: inline;">
+          <h3 class="blogs_section__card_header" style="display: inline;" id="blog1-header">Blog 1</h3>
+          <p class="blogs_section__card_text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam error laborum id modi rerum, nulla nobis
             mollitia excepturi ea. Iste, consectetur voluptatibus molestias quod cum nisi rerum ullam consequatur?
             Assumenda nisi inventore quam fuga laboriosam placeat nulla ad sapiente perferendis.
           </p>
-          <a href="./blogs/blog1" aria-labelledby="blog1-header">
+          <a href="./blogs/blog1" class="blogs_section__link" aria-labelledby="blog1-header">
             Read more!
           </a>
         </section>
-        <section>
-          <img src="./assets/images/img-2.jpg" width="300px" alt="mac laptop image" style="display: inline;">
-          <h3 style="display: inline;" id="blog2-header">Blog 2</h3>
-          <p>
+        <section class="blogs_section__card">
+          <img class="blogs_section__image" src="./assets/images/img-2.jpg" width="300px" alt="mac laptop image"
+            style="display: inline;">
+          <h3 class="blogs_section__card_header" style="display: inline;" id="blog2-header">Blog 2</h3>
+          <p class="blogs_section__card_text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam error laborum id modi rerum, nulla nobis
             mollitia excepturi ea. Iste, consectetur voluptatibus molestias quod cum nisi rerum ullam consequatur?
             Assumenda nisi inventore quam fuga laboriosam placeat nulla ad sapiente perferendis.
           </p>
-          <a href="./blogs/blog2" aria-labelledby="blog2-header">
+          <a href="./blogs/blog2" class="blogs_section__link" aria-labelledby="blog2-header">
             Read more!
           </a>
         </section>
-        <section>
-          <img src="./assets/images/img-3.jpg" width="300px" alt="work desktop image" style="display: inline;">
-          <h3 style="display: inline;" id="blog3-header">Blog 3</h3>
-          <p>
+        <section class="blogs_section__card">
+          <img class="blogs_section__image" src="./assets/images/img-3.jpg" width="300px" alt="work desktop image"
+            style="display: inline;">
+          <h3 class="blogs_section__card_header" style="display: inline;" id="blog3-header">Blog 3</h3>
+          <p class="blogs_section__card_text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam error laborum id modi rerum, nulla nobis
             mollitia excepturi ea. Iste, consectetur voluptatibus molestias quod cum nisi rerum ullam consequatur?
             Assumenda nisi inventore quam fuga laboriosam placeat nulla ad sapiente perferendis.
           </p>
-          <a href="./blogs/blog3" aria-labelledby="blog3-header">
+          <a href="./blogs/blog3" class="blogs_section__link" aria-labelledby="blog3-header">
             Read more!
           </a>
         </section>
       </div>
     </section>
     <hr>
-    <section id="contact">
-      <h2 id="contact-header">Contact us!</h2>
-      <form aria-labelledby="contact-header">
-        <label for="fname"></label>
-        <input placeholder="First Name" type="text" name="first name" id="fname"> <br>
-        <label for="email-address"></label>
-        <input placeholder="Email" type="email" name="email" id="email-address"> <br>
-        <label for="more-info"></label>
-        <textarea placeholder="Do you need to tell us anything?" style="display: block;" name="info"
-          id="more-info"" cols=" 30" rows="10"></textarea>
-        <button type="submit">
+    <section class="contact_section" id="contact">
+      <h2 class="contact_section__header" id="contact-header">Contact us!</h2>
+      <form class="contact_section__form" aria-labelledby="contact-header">
+        <label class="form__label" for="fname"></label>
+        <input class="form__input" placeholder="First Name" type="text" name="first name" id="fname"> <br>
+        <label class="form__label" for="email-address"></label>
+        <input class="form__input" placeholder="Email" type="email" name="email" id="email-address"> <br>
+        <label class="form__label" for="more-info"></label>
+        <textarea class="form__textarea" placeholder="Do you need to tell us anything?" style="display: block;"
+          name="info" id="more-info"" cols=" 30" rows="10"></textarea>
+        <button class="form__submit" type="submit">
           Send
         </button>
       </form>
     </section>
     <hr>
-    <footer>
-      <span>This site is property of abraham pineda © 2023 </span>
-      <div style="display: inline-block;">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    <footer class="footer_section">
+      <span class="footer_section__rights">This site is property of abraham pineda © 2023 </span>
+      <div class="footer_section__links_container" style="display: inline-block;">
+        <a class="footer_link" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="footer_link" href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i></a>
+        <a class="footer_link" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
     </footer>
   </main>
