@@ -25,6 +25,7 @@ $spacing-large: $spacing-base * 2;
 $text-size-base: 1.5rem;
 $text-small: $text-size-base * 0.8;
 $text-larger: $text-size-base * 1.5;
+$text-xxl: $text-size-base * 2;
 
 $font-light: 300;
 $font-regular: 400;
@@ -36,10 +37,32 @@ $font-bold: 700;
     font-weight: $font-regular;
 }
 
+@mixin section-header {
+    font-size: $text-xxl;
+    text-align: center;
+    margin: $spacing-normal;
+}
+
 @mixin flex-align {
     display: flex;
     align-items: center;
     justify-content: space-around
+}
+
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+@mixin border-accent-shape {
+    border-bottom: 5px solid $accents-color;
+    border-radius: 10%;
+}
+
+@mixin border-shape {
+    border: 3px solid $secondary-color;
+    border-radius: 2%;
 }
 
 body {
@@ -52,13 +75,17 @@ hr {
     border-color: $secondary-color;
 }
 
-/*navigation*/
-
 .logo {
     font-family: 'Tilt Prism';
     color: $secondary-color;
     font-size: 3rem;
     padding: $spacing-normal;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        color: $accents-color;
+    }
 }
 
 .navigation {
@@ -76,15 +103,18 @@ hr {
         text-decoration: none;
         transition: .3s;
         font-size: $text-small;
-        padding: $spacing-normal;
+        margin: $spacing-normal;
+        @include border-accent-shape();
+        border-color: transparent;
 
         &:hover {
             color: $accents-color;
+            border-color: $accents-color;
         }
     }
 }
 
-/*header*/
+
 
 .hero {
     height: 100vh;
@@ -100,5 +130,62 @@ hr {
 
     &__highlight {
         color: $accents-color;
+    }
+}
+
+.services_section {
+    padding: $spacing-normal;
+    color: $secondary-color;
+    display: grid;
+    place-items: center;
+
+    &__header {
+        @include section-header();
+        @include border-accent-shape();
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__card {
+        display: grid;
+        min-height: 300px;
+        padding: $spacing-small;
+        margin: $spacing-small;
+        place-items: center;
+        grid-template-rows: 1fr 2fr 1fr;
+        transition: .3s ease-in-out;
+        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+
+        @include border-shape();
+
+        &:hover {
+            transform: translateY(-5%);
+        }
+    }
+
+    &__card_header {
+        text-align: center;
+        font-size: $text-larger;
+    }
+
+    &__btn {
+        color: $secondary-color;
+        background-color: $main-color;
+        font-weight: $font-bold;
+        font-size: $text-size-base;
+        padding: $spacing-small;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+
+        @include border-shape();
+
+        &:hover {
+            color: $accents-color;
+            transform: scale(1.1);
+        }
     }
 }

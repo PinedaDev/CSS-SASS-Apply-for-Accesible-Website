@@ -23,12 +23,16 @@ hr {
   border-color: #BAD7E9;
 }
 
-/*navigation*/
 .logo {
   font-family: "Tilt Prism";
   color: #BAD7E9;
   font-size: 3rem;
   padding: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.logo:hover {
+  color: #EB455F;
 }
 
 .navigation {
@@ -47,13 +51,16 @@ hr {
   text-decoration: none;
   transition: 0.3s;
   font-size: 1.2rem;
-  padding: 2rem;
+  margin: 2rem;
+  border-bottom: 5px solid #EB455F;
+  border-radius: 10%;
+  border-color: transparent;
 }
 .navigation__link:hover {
   color: #EB455F;
+  border-color: #EB455F;
 }
 
-/*header*/
 .hero {
   height: 100vh;
   padding: 2rem;
@@ -69,6 +76,59 @@ hr {
 }
 .hero__highlight {
   color: #EB455F;
+}
+
+.services_section {
+  padding: 2rem;
+  color: #BAD7E9;
+  display: grid;
+  place-items: center;
+}
+.services_section__header {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+  border-bottom: 5px solid #EB455F;
+  border-radius: 10%;
+}
+.services_section__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.services_section__card {
+  display: grid;
+  min-height: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  place-items: center;
+  grid-template-rows: 1fr 2fr 1fr;
+  transition: 0.3s ease-in-out;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border: 3px solid #BAD7E9;
+  border-radius: 2%;
+}
+.services_section__card:hover {
+  transform: translateY(-5%);
+}
+.services_section__card_header {
+  text-align: center;
+  font-size: 2.25rem;
+}
+.services_section__btn {
+  color: #BAD7E9;
+  background-color: #2B3467;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: 3px solid #BAD7E9;
+  border-radius: 2%;
+}
+.services_section__btn:hover {
+  color: #EB455F;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
