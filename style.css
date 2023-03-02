@@ -53,10 +53,22 @@ hr {
   color: #EB455F;
 }
 
+/*header*/
 .hero {
   height: 100vh;
-  display: flex;
   padding: 2rem;
+  color: #BAD7E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.hero__text {
+  font-size: 2.25rem;
+  display: block;
+  max-width: 50%;
+}
+.hero__highlight {
+  color: #EB455F;
 }
 
 /*# sourceMappingURL=style.css.map */
