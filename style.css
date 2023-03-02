@@ -131,4 +131,26 @@ hr {
   transform: scale(1.1);
 }
 
+.tech_stack_section {
+  display: grid;
+  place-items: center;
+  color: #BAD7E9;
+  padding: 2rem;
+}
+.tech_stack_section__header {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+  border-bottom: 5px solid #EB455F;
+  border-radius: 10%;
+}
+.tech_stack_section__icons {
+  width: 100%;
+  list-style-type: none;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=style.css.map */
